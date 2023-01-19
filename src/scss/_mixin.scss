@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+//  colors
+$main-color: #EA60A9;
+$sub-color: #BDC2C8;
+$key-color: #FB3939;
+
+$main-text-color: #ececf1;
+$gray-text-color: #d1d5db;
+
+$background-color: #444654;
+$header-color: #202123;
+$footer-color: #252C43;
+
+$white: #ffffff;
+$gray: #595b68;
+$gray-02: #bcbcbc;
+
+$title-font: 'Montserrat', sans-serif;
+$text-font-01: 'Noto Sans JP', sans-serif;
+$text-font-02: 'Roboto', sans-serif;
+$handwritten-font: 'Square Peg', cursive;
+
+// breakpoints config 
+$breakpoints: ('sm': 'screen and (min-width: 400px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 1000px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

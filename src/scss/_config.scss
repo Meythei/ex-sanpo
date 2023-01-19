@@ -1,0 +1,31 @@
+$breakpoints: (
+    "sm": "screen and (min-width: 400px)",
+    "md": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 1000px)",
+    "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+$main-color: #EA60A9;
+$sub-color: #BDC2C8;
+$key-color: #FB3939;
+
+$main-text-color: #252C43;
+$gray-text-color: #4a4a4a;
+
+$background-color: #FFFFFF;
+$footer-color: #252C43;
+$background-panel-color: #D3D3D3;
+$background-panel-color-02: #252C43;
+
+$white: #ffffff;
+$gray: #D3D3D3;
+
+$title-font: 'Montserrat', sans-serif;
+$text-font-01: 'Noto Sans JP', sans-serif;
+$text-font-02: 'Roboto', sans-serif;
+$handwritten-font: 'Square Peg', cursive;
